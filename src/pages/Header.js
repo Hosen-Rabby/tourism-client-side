@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavbarBrand } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
+import './style.css'
 // import Navbar from 'react-bootstrap/Navbar'
 
 const Header = () => {
@@ -10,31 +10,35 @@ const Header = () => {
     return (
         <div>
 
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className ="sticky-top">
+            <Navbar collapseOnSelect expand="lg" className="menubar" fixed="top">
                 <Container>
-                    <NavbarBrand href="#home">tripo</NavbarBrand>
+                    <NavbarBrand href="/" className = "logo">tourDe</NavbarBrand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="m-auto">
-                            <Nav.Link href="#features">Features</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
+                            <Nav.Link href="/home" className ='menu_item'>Home</Nav.Link>
+                            <Nav.Link href="/home/#about" className ='menu_item'>About</Nav.Link>
+                            <Nav.Link href="/home/#featured" className ='menu_item'>Featured</Nav.Link>
+                            <Nav.Link href="/home/#trusted" className ='menu_item'>Trusted</Nav.Link>
+                            <Nav.Link href="#pricing" className ='menu_item'>Contact</Nav.Link>
                         </Nav>
                         <Nav>
                             <nav>
                                 {
                                     user.email &&
-                                    <button>My Booking</button>
+                                    <button className='d_btn'>My Booking</button>
                                 }
+                            </nav>
+                            <nav>
                                 {
                                     user.email &&
-
-                                    <span>{user.displayName}</span>
+                                    <span className='d_name'>{user.displayName}</span>
                                 }
                                 {
                                     user.email ?
-                                        <button onClick={logOut}>Logout</button>
+                                        <button onClick={logOut} className='d_btn'>Logout</button>
                                         :
-                                        <NavLink to="/login">Login</NavLink>
+                                        <NavLink to="/login" className='d_btn'>Login</NavLink>
                                 }
 
 

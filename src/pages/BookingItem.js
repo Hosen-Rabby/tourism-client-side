@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { Col, Container, Row, Image } from 'react-bootstrap';
 import { NavLink, useParams } from 'react-router-dom';
+import './style.css';
 
 const BookingItem = () => {
     const { id } = useParams();
-    console.log(id)
     const [booking, setBooking] = useState({});
-    // console.log(booking)
 
-    const { name, img } = booking;
+    const { name, img, img2, district, longDes } = booking;
 
     useEffect(() => {
         fetch(`https://infinite-garden-22161.herokuapp.com/booking/${id}`)
@@ -19,10 +19,37 @@ const BookingItem = () => {
 
 
     return (
-        <div>
-            <NavLink to="/shipping">Book Now</NavLink>
-            <h1>{name}</h1>
-            <img src={img}></img>
+        <div className='b_booking_item'>
+            <div className="featured_img">
+                <Image src={img2} className='img-fluid' />
+
+            </div>
+            <Container>
+                <div className='location'>
+                    <Row>
+                        <Col md={6}>
+                            <h3>{name} <span>-{district}</span></h3>
+                        </Col>
+                        <Col md={6}>
+                            <div className = 'ship_right'>
+                                <NavLink to={`/shipping/${id}`} className='d_btn ship'>Book and Shipping</NavLink>
+                            </div>
+                        </Col>
+                    </Row>
+                </div>
+
+                <Row>
+                    <Col md={4}>
+                        <h2>Overview</h2>
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col md={12}>
+                        <p>{longDes}</p>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 };

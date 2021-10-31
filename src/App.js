@@ -18,6 +18,7 @@ import AuthProvider from './context/AuthProvider';
 import Booking from './pages/Booking';
 import PrivateRoute from './pages/PrivateRoute';
 import Shipping from './pages/Shipping';
+import Footer from './pages/Footer';
 
 
 
@@ -43,13 +44,14 @@ function App() {
             <PrivateRoute path='/bookingitem/:id'>
               <BookingItem></BookingItem>
             </PrivateRoute>
-            <PrivateRoute path='/shipping'>
+            <PrivateRoute path='/shipping/:id'>
               <Shipping></Shipping>
             </PrivateRoute>
             <Route path='*'>
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
     </div>

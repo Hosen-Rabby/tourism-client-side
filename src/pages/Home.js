@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col,Image } from 'react-bootstrap';
 import Booking from './Booking';
 import './style.css'
 
@@ -10,7 +10,7 @@ const Home = () => {
             <div className="banner">
                 <Container>
                     <Row>
-                        <Col md={6}>
+                        <Col md={8}>
                             <h1>Find your next <span>tour</span></h1>
                             <h4>Where would you like to go?</h4>
                         </Col>
@@ -21,7 +21,7 @@ const Home = () => {
             {/* end of banner */}
 
             {/* call to book start */}
-            <div id='' className='call_to_book'>
+            <div id='about' className='call_to_book'>
                 <Container>
                     <Row>
                         <Col lg={2}></Col>
@@ -63,7 +63,7 @@ const Home = () => {
 
             {/* booking start */}
 
-            <div className='booking'>
+            <div id='featured' className='booking'>
                 <Booking></Booking>
             </div>
 
@@ -72,13 +72,13 @@ const Home = () => {
 
             {/* trust start */}
 
-            <div id='trust' className='trust'>
+            <div id='trusted' className='trust'>
                 <div className='trust_top'>
                     <div className='trust_overlay'>
                         <Container>
                             <Row>
-                                <Col lg={2}></Col>
-                                <Col lg={8}>
+                                <Col lg={2} sm={0}></Col>
+                                <Col lg={8} sm={12}>
                                     <h6 className="orange_text">
                                         Love where you're going
                                     </h6>
@@ -95,7 +95,7 @@ const Home = () => {
                 <div className='trust_bottom'>
                     <Container>
                         <Row>
-                            <Col lg={6}>
+                            <Col lg={6} sm={12}>
                                 <div className='trust_right'>
                                     <h6 className="orange_text">
                                         TRUSTED & PROFESSIONAL
@@ -106,13 +106,14 @@ const Home = () => {
                                         84,106
                                         Clients</h2>
                                     <Col md={8}>
-                                        <img src='../img/trustR.jpg' alt='tour'></img>
+                                    <div className='trustR'>
+
+                                    </div>
                                     </Col>
                                 </div>
                             </Col>
-                            <Col lg={6}>
-                                <div className='trust_left'>
-                                    <img src='../img/trustL.jpg'></img>
+                            <Col lg={6} sm={12}>
+                                <div className='trustL'>
                                 </div>
                             </Col>
                         </Row>

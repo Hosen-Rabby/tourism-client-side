@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './style.css'
 
 
 const Booking = () => {
@@ -34,13 +35,17 @@ const Booking = () => {
                     {
                         bookings.map(booking =>
                             <Col lg={4} md={6} key={booking._id}>
-                                <img src={booking.img} className='img-fluid'></img>
-                                <h2>{booking.name}</h2>
-                                <p>{booking.shortDes}</p>
-                                <h6>{booking.price} / <spna>Per person</spna></h6>
-                                <Link to={`/bookingitem/${booking._id}`}>
-                                    <button className="btn btn-warning">Book Now</button>
-                                </Link>
+                                <div className='booking_item'>
+                                    <div className='booking_img'>
+                                        <img src={booking.img} className='img-fluid'></img>
+                                    </div>
+                                    <h2>{booking.name}</h2>
+                                    <p>{booking.shortDes}</p>
+                                    <h6>{booking.price} Tk.  <span>Per person</span></h6>
+                                    <Link to={`/bookingitem/${booking._id}`}>
+                                        <button className="btn booking_btn">Book Now</button>
+                                    </Link>
+                                </div>
                             </Col>
                         )
                     }

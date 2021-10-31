@@ -1,9 +1,9 @@
 import React from 'react';
+import './style.css';
 
 const NotFound = () => {
     return (
-        <div>
-            not found
+        <div className='not'>
         </div>
     );
 };
