@@ -54,6 +54,14 @@
     font-size: 55px;
     color: #fff;
 }
+
+.banner h1 span{
+    color: #ffa801;
+}
+
+.banner h4{
+    color: #fff;
+}
 /* call to book */
 
 .call_to_book{
@@ -347,6 +355,15 @@
     border-radius: 3px;
 }
 
+/* conatct */
+.contact{
+    padding: 50px 0;
+    background:rgb(255, 255, 255);
+}
+
+.contact h4{
+    margin-top: 40px;
+}
 
 /* not found */
 
@@ -355,6 +372,16 @@
     margin-top: 110px;
     background: url("../img/not.png") no-repeat center;
     background-size: cover;
+}
+
+.mybooking{
+    min-height: 100vh;
+    margin-top: 110px;
+    background: url("../img/login.jpg") no-repeat center;
+    background-size: cover;
+}
+.mbook{
+    margin-top: 11px;
 }
 /* footer */
 
@@ -385,4 +412,9 @@
     cursor: pointer;
     color: #202020;
     font-weight: 500;
+}
+
+.spin{
+    margin-top: 150px;
+    margin-bottom: 50px;
 }

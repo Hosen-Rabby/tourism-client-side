@@ -19,6 +19,7 @@ import Booking from './pages/Booking';
 import PrivateRoute from './pages/PrivateRoute';
 import Shipping from './pages/Shipping';
 import Footer from './pages/Footer';
+import MyBooking from './pages/MyBooking';
 
 
 
@@ -38,6 +39,9 @@ function App() {
             <Route path='/login'>
               <Login></Login>
             </Route>
+            {/* <Route path='/mybooking'>
+              <MyBooking></MyBooking>
+            </Route> */}
             <PrivateRoute path='/booking'>
               <Booking></Booking>
             </PrivateRoute>

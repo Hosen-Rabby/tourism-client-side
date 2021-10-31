@@ -2,10 +2,12 @@ import React from 'react';
 import { Container, Nav, Navbar, NavbarBrand } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
+import { useParams } from 'react-router-dom';
 import './style.css'
 // import Navbar from 'react-bootstrap/Navbar'
 
 const Header = () => {
+    const {id} = useParams();
     const { user, logOut } = useAuth();
     return (
         <div>
@@ -20,13 +22,13 @@ const Header = () => {
                             <Nav.Link href="/home/#about" className ='menu_item'>About</Nav.Link>
                             <Nav.Link href="/home/#featured" className ='menu_item'>Featured</Nav.Link>
                             <Nav.Link href="/home/#trusted" className ='menu_item'>Trusted</Nav.Link>
-                            <Nav.Link href="#pricing" className ='menu_item'>Contact</Nav.Link>
+                            <Nav.Link href="/home/#contact" className ='menu_item'>Contact</Nav.Link>
                         </Nav>
                         <Nav>
-                            <nav>
+                            <nav className='mbook'>
                                 {
                                     user.email &&
-                                    <button className='d_btn'>My Booking</button>
+                                    <NavLink to={`/shipping/${id}`} className='d_btn'>My Booking</NavLink>
                                 }
                             </nav>
                             <nav>

@@ -21,6 +21,19 @@ const Shipping = () => {
 
     }, [])
 
+    // delete 
+    const handleDelete = id => {
+        const url = `https://infinite-garden-22161.herokuapp.com/shipping/${id}`;
+        fetch(url, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then (data => {
+            if(data.deletedCount > 0){
+                alert('Removed Succesfully!')
+            }
+        })
+    }
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const { user } = useAuth();
@@ -37,7 +50,7 @@ const Shipping = () => {
                                 <h5>{name}</h5>
                                 <h6>Total: {price} Tk</h6>
                             </div>
-                            <button className='remove'>Remove</button>
+                            <button onClick= {() => handleDelete(id)} className='remove'>Remove</button>
                         </div>
                     </Col>
                     <Col lg={6}>

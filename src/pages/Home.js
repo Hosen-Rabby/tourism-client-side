@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col,Image } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import Booking from './Booking';
 import './style.css'
 
@@ -106,9 +106,9 @@ const Home = () => {
                                         84,106
                                         Clients</h2>
                                     <Col md={8}>
-                                    <div className='trustR'>
+                                        <div className='trustR'>
 
-                                    </div>
+                                        </div>
                                     </Col>
                                 </div>
                             </Col>
@@ -123,6 +123,34 @@ const Home = () => {
             </div>
 
             {/* trust end */}
+
+            {/* contact start */}
+
+            <div id = "contact" className = 'contact'>
+                <Container>
+                    <Row>
+                        <Col md = {12}>
+                        <h6 className="orange_text">
+                                MEET WITH US
+                            </h6>
+                            <h2>
+                                Contact
+                            </h2>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={12}>
+                            <h4>Phone:</h4>
+                            <p>+0173079823</p>
+                            <p>+0177379823</p>
+                            <h4>Emai Us:</h4>
+                            <p>info.tourde@gmail.com</p>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+
+            {/* contact end */}
         </div>
     );
 };
