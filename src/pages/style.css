@@ -1,0 +1,80 @@
+/* banner */
+
+.banner{
+    background: url('../img/banner.jpg') no-repeat center;
+    background-size: cover;
+    text-align: left;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+/* call to book */
+
+.call_to_book{
+    padding: 100px 0;
+    background: #082740;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.call_to_book h2{
+    font-size: 50px;
+    padding-bottom: 25px;
+    margin-bottom: 40px;
+}
+
+.orange_text{
+    color: #ffa801;
+    font-size: 14px;
+}
+
+.call_item{
+    color: #082740;
+    background: #fff;
+}
+
+.call_item p{
+    font-weight: 500;
+    padding: 50px 0;
+}
+
+/* booking */
+
+.booking{
+    padding: 100px 0;
+}
+
+/* trust */
+.trust{
+    padding: 100px 0;
+}
+
+.trust_top{
+    background: url(../img/trustbg.jpg) no-repeat center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.trust_top h2{
+    font-size: 50px;
+    padding-bottom: 25px;
+    margin-bottom: 40px;
+    color:#fff;
+}
+
+
+.trust_overlay{
+    background: #08274088;
+    width: 100%;
+    padding: 120px;
+}
+
+
+.trust_bottom{
+    padding: 100px 0;
+}
+
+.trust_right{
+    background: #ECEEEF;
+    padding: 50px 0;
+}
