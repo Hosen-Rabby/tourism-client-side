@@ -27,12 +27,12 @@ const Shipping = () => {
         fetch(url, {
             method: 'DELETE'
         })
-        .then(res => res.json())
-        .then (data => {
-            if(data.deletedCount > 0){
-                alert('Removed Succesfully!')
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    alert('Removed Succesfully!')
+                }
+            })
     }
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -46,11 +46,11 @@ const Shipping = () => {
                         <h3>Your booked items:</h3>
                         <div className='booked'>
                             <img src={img} className='img-fluid' />
-                            <div className ='booked_info'>
+                            <div className='booked_info'>
                                 <h5>{name}</h5>
                                 <h6>Total: {price} Tk</h6>
                             </div>
-                            <button onClick= {() => handleDelete(id)} className='remove'>Remove</button>
+                            <button onClick={() => handleDelete(id)} className='remove'>Remove</button>
                         </div>
                     </Col>
                     <Col lg={6}>

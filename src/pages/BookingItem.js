@@ -31,7 +31,7 @@ const BookingItem = () => {
                             <h3>{name} <span>-{district}</span></h3>
                         </Col>
                         <Col md={6}>
-                            <div className = 'ship_right'>
+                            <div className='ship_right'>
                                 <NavLink to={`/shipping/${id}`} className='d_btn ship'>Book and Shipping</NavLink>
                             </div>
                         </Col>
